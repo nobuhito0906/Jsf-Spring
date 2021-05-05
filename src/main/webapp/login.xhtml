@@ -1,0 +1,24 @@
+<f:view xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<h:head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>ログイン画面</title>
+	</h:head>
+	<h:body>
+		<div>
+			<h2 style="text-align: center">ログイン画面</h2>
+			<p style="text-align: center">
+				<h:form>
+					<p>ユーザ名</p>
+					<h:inputText id="name" value="#{loginManagedBean.name}" />
+					<p>パスワード</p>
+					<h:inputSecret id="password" value="#{loginManagedBean.password}" />
+					<h:commandButton value="ログイン" action="#{loginManagedBean.login()}" />
+					<h:messages />
+				</h:form>
+			</p>
+		</div>
+	</h:body>
+</f:view>
